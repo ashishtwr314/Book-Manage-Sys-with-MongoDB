@@ -1,0 +1,49 @@
+<%- include("header.ejs") %>
+<div class="wrapper">
+  <%- include("sidebar.ejs") %>
+
+  <div class="main_content">
+    <%- include("navbar.ejs") %>
+    <div class="books">
+      <% books.map(book => { %>
+      <a href="/details/<%= book._id %>">
+        <div class="book">
+          <div class="book-contents">
+            <div class="book-img">
+              <img src="https://dummyimage.com/150x180" />
+            </div>
+            <div class="book-details">
+              <div class="book-name"><%= book.name %></div>
+              <div class="book-author"><%= book.author %></div>
+              <div class="book-price">$ <%= book.price %></div>
+            </div>
+          </div>
+
+          <% if(adminMode) { %>
+          <div class="admin-btns">
+            <a href="/edit/<%= book._id %>" class="btn-edit" type="button"
+              >Edit</a
+            >
+            <a
+              method="POST"
+              href="/delete/<%= book._id %>"
+              class="btn-delete"
+              type="button"
+              >Delete</a
+            >
+          </div>
+
+          <% } %> %>
+        </div>
+      </a>
+
+      <% }) %>
+    </div>
+  </div>
+</div>
+
+<%if(adminMode) { %>
+<a href="/addbook" class="addBook-btn">
+  +
+</a>
+<% }%> <%- include("footer.ejs") %>

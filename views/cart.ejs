@@ -1,0 +1,31 @@
+<%- include("header.ejs") %>
+<div class="wrapper">
+  <%- include("sidebar.ejs") %>
+
+  <div class="main_content">
+    <%- include("navbar.ejs") %>
+
+    <div class="cart-items">
+      <% if(cartBooks.length > 0) { cartBooks.map(book => { %>
+      <div class="item">
+        <div class="item-details">
+          <%= book.name %> <br />
+
+          <span class="author">by <%= book.author %></span>
+        </div>
+        <div class="item-qty"><%= book.quantity %></div>
+        <div class="item-price"><%= book.price %>/-</div>
+        <div class="item-delete">
+          <a href="/deleteFromCart/<%= book.book_id %>">Delete</a>
+        </div>
+      </div>
+      <% }) } else{ %>
+      <div class="item">
+        No Items in Cart
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<%- include("footer.ejs") %>

@@ -1,0 +1,62 @@
+<%- include("header.ejs") %>
+
+<div class="wrapper">
+  <div class="main_content add-book-wrapper">
+    <%- include("navbar.ejs") %>
+    <h2>Add Book</h2>
+    <form
+      method="POST"
+      class="addbook-form"
+      action=" <%= editingMode ? '/admin' : '/' %>"
+    >
+      <input
+        value="<%=  editingMode ? book.name : null %>"
+        type="text"
+        name="name"
+        placeholder="Name"
+      />
+      <span class="error error-name"></span>
+      <input
+        value="<%=  editingMode ? book.author : null %>"
+        type="text"
+        name="author"
+        placeholder="Author"
+      />
+      <span class="error error-author"></span>
+
+      <input
+        value="<%=  editingMode ? book.genre : null %>"
+        type="text"
+        name="genre"
+        placeholder="Genre"
+      />
+      <span class="error error-genre"></span>
+
+      <select name="type">
+        <option value="Hardcover">Hardcover</option>
+        <option value="Paperback">Paperback</option>
+      </select>
+      <span class="error error-genre"></span>
+      <input
+        value="<%=  editingMode ? book.price : null %>"
+        type="text"
+        name="price"
+        placeholder="Price"
+      />
+      <textarea name="desc" rows="10" placeholder="Description">
+<%= editingMode ? book.desc : null %></textarea
+      >
+      <span class="error error-name"></span>
+
+      <% if(editingMode) {%>
+      <input type="hidden" name="_id" value="<%= book._id %>" />
+      <% } %>
+
+      <button type="submit" class="addbook-btn">
+        <%= editingMode ? "Update Book" : "Add Book" %>
+      </button>
+    </form>
+  </div>
+</div>
+
+<%- include("footer.ejs") %>

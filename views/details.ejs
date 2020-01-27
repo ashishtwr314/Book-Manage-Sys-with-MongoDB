@@ -1,0 +1,100 @@
+<%- include("header.ejs") %>
+
+<div class="wrapper">
+  <%- include("sidebar.ejs") %>
+
+  <div class="main_content">
+    <%- include("navbar.ejs") %>
+
+    <h1>Book Details</h1>
+    <div class="book_details-wrapper">
+      <div class="book_details-container">
+        <div class="book_details-image">
+          <img src="https://dummyimage.com/230x320" />
+        </div>
+        <div class="book_details-detail">
+          <h1 class="book_details-name">
+            <%= book.name %> <br / >
+            <span class="book_details-author"
+              >by <a href=""><%= book.author %></a></span
+            >
+          </h1>
+
+          <div class="book_detials-rating">* * * * *</div>
+          <div class="book_details-genre"><%= book.type %></div>
+          <div class="book_details-description">
+            <%= book.desc %>
+          </div>
+          <div class="book_details-price">
+            $<%= book.price %>
+            <form method="POST" action="/addToCart">
+              <input name="_id" type="hidden" value="<%= book._id %>" />
+              <input name="name" type="hidden" value="<%= book.name %>" />
+              <button type="submit" class="addToCart">Add to Cart</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="more_books">
+      <div class="more_books-book">
+        <div class="more_books-book-image">
+          <img src="https://dummyimage.com/140x170" />
+        </div>
+        <div class="more_books-book-name">
+          The Light Between <br />
+          <span class="more_books-book-author">by <a>M.L. Stedman</a></span>
+        </div>
+        <div class="more_books-book-rating">* * * * *</div>
+        <div class="more_books-book-price">$13.89</div>
+      </div>
+      <div class="more_books-book">
+        <div class="more_books-book-image">
+          <img src="https://dummyimage.com/140x170" />
+        </div>
+        <div class="more_books-book-name">
+          The Light Between <br />
+          <span class="more_books-book-author">by <a>M.L. Stedman</a></span>
+        </div>
+        <div class="more_books-book-rating">* * * * *</div>
+        <div class="more_books-book-price">$13.89</div>
+      </div>
+      <div class="more_books-book">
+        <div class="more_books-book-image">
+          <img src="https://dummyimage.com/140x170" />
+        </div>
+        <div class="more_books-book-name">
+          The Light Between <br />
+          <span class="more_books-book-author">by <a>M.L. Stedman</a></span>
+        </div>
+        <div class="more_books-book-rating">* * * * *</div>
+        <div class="more_books-book-price">$13.89</div>
+      </div>
+      <div class="more_books-book">
+        <div class="more_books-book-image">
+          <img src="https://dummyimage.com/140x170" />
+        </div>
+        <div class="more_books-book-name">
+          The Light Between <br />
+          <span class="more_books-book-author">by <a>M.L. Stedman</a></span>
+        </div>
+        <div class="more_books-book-rating">* * * * *</div>
+        <div class="more_books-book-price">$13.89</div>
+      </div>
+      <div class="more_books-book">
+        <div class="more_books-book-image">
+          <img src="https://dummyimage.com/140x170" />
+        </div>
+        <div class="more_books-book-name">
+          The Light Between <br />
+          <span class="more_books-book-author">by <a>M.L. Stedman</a></span>
+        </div>
+        <div class="more_books-book-rating">* * * * *</div>
+        <div class="more_books-book-price">$13.89</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("footer.ejs") %>

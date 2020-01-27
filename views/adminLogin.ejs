@@ -1,0 +1,15 @@
+<%- include("header.ejs") %>
+<div class="wrapper">
+  <div class="main_content adminLoginWrapper ">
+    <%- include("navbar.ejs") %>
+    <h2>Login as Admin</h2>
+
+    <form action="/admin" class="adminLoginForm">
+      <input type="text" placeholder="Email" />
+      <input type="text" placeholder="Password" />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<%- include("footer.ejs") %>

@@ -1,0 +1,310 @@
+* {
+  box-sizing: inherit;
+}
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.wrapper {
+  display: flex;
+}
+/*  SIDEBAR   */
+.wrapper .sidebar {
+  padding: 0px;
+  background-color: #30385c;
+  color: #fff;
+}
+.wrapper .sidebar .sidebar-content {
+  padding: 0 20px;
+  margin: 20px 0;
+}
+.wrapper .sidebar .logo {
+  text-align: left;
+  padding: 20px 0 20px 15px;
+  font-weight: 900;
+  background-color: #2b3253;
+  color: #f5f5f5;
+}
+.navbar_searchbar {
+  margin-right: auto;
+  padding: 12px 0;
+}
+.navbar_searchbar input {
+  padding: 5px 10px;
+  outline: none;
+}
+.navbar_action-buttons {
+  display: flex;
+  align-items: center;
+}
+.navbar_action-buttons .cart {
+  margin-right: 20px;
+}
+\ .sidebar_batch {
+  margin: 60px 0;
+}
+.sidebar_batch-heading {
+  margin: 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.sidebar_batch-book {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.sidebar_batch-book-content {
+  padding: 0 0 0 10px;
+  font-size: 15px;
+}
+.sidebar_batch-book-name {
+  font-weight: bold;
+}
+.sidebar_batch-book-author {
+  color: #858899;
+}
+.sidebar_batch-book-price {
+  margin-top: 17px;
+  font-weight: bold;
+}
+.sidebar_batch-book-image img {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*  MAIN CONTENT   */
+
+.wrapper .main_content {
+  flex: 5;
+  padding: 0 30px;
+  background-color: #ecf6ff;
+}
+.main_content .navbar {
+  display: flex;
+  margin-bottom: 50px;
+}
+.book_details-container {
+  display: flex;
+  padding: 20px 25px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.book_details-detail {
+  padding: 0 30px;
+  color: #9393a2;
+}
+.book_details-name {
+  font-size: 25px;
+  margin: 5px 0;
+  color: #000;
+}
+.book_details-author {
+  font-size: 16px;
+}
+.book_details-genre {
+  margin: 5px 0;
+}
+.book_details-price {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+}
+.book_details-description {
+  line-height: 25px;
+}
+/* More Books */
+.more_books {
+  display: flex;
+  margin: 100px 0 50px 0;
+}
+
+.more_books-book {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 0 15px;
+}
+.more_books-book-image img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.more_books-book-author {
+  font-size: 12px;
+}
+.more_books-book-rating {
+  margin: 3px 0;
+}
+
+/*    HOME PAGE   */
+.books {
+  display: flex;
+  flex-wrap: wrap;
+}
+.books .book {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+}
+
+.book .book-contents {
+  display: flex;
+  align-items: center;
+}
+.book .book-details {
+  margin: 0 15px;
+}
+.book .book-name {
+  font-weight: 900;
+  font-size: 20px;
+}
+.book .book-author {
+  color: #424242;
+}
+.book .book-price {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.addBook-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #30385c;
+  color: #fff;
+  padding: 0px 15px;
+  border-radius: 50%;
+  font-size: 50px;
+}
+
+/*  ADD BOOK  */
+.add-book-wrapper {
+  border: 1px solid;
+  height: 100vh;
+}
+.addbook-form {
+  display: inline-block;
+}
+.addbook-form input::placeholder,
+.addbook-form textarea::placeholder {
+  color: #a2a9c9;
+  font-weight: bold;
+}
+.add-book-wrapper {
+  text-align: center;
+}
+
+.addbook-form input,
+.adminLoginForm input,
+.addbook-form select,
+.addbook-form textarea {
+  width: 350px;
+  /* max-width: 250px; */
+  display: block;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #30385c;
+  color: #30385c;
+  padding: 8px 5px;
+  outline: 0;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+.addbook-btn,
+.adminLoginForm button {
+  background-color: #30385c;
+  color: #f5f5f5;
+  padding: 10px 23px;
+  width: 150px;
+  border: 0;
+  font-weight: bold;
+}
+.adminMode-btn {
+  display: block;
+  border: 1px solid;
+  padding: 8px;
+  background-color: #30385c;
+  color: #f5f5f5;
+  font-size: 14px;
+}
+
+.admin-btns {
+  margin: 15px 0 5px 0;
+}
+
+.btn-edit,
+.btn-delete {
+  border: 1px solid #000;
+  padding: 3px 10px;
+  margin-right: 10px;
+  color: #f5f5f5;
+  font-size: 13px;
+}
+.btn-edit {
+  background-color: #30385c;
+}
+.btn-delete {
+  background-color: firebrick;
+}
+.addToCart {
+  background-color: #30385c;
+  color: #f5f5f5;
+  border: 0;
+  padding: 5px 20px;
+  margin: 10px 0;
+}
+.cart-items {
+  width: 700px;
+  margin: 100px auto;
+}
+.item {
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+.item > div {
+  flex: 1;
+}
+.item .item-details {
+  flex: 2;
+}
+.item .item-details .author {
+  font-size: 13px;
+  color: #be9292;
+}
+.item .item-delete {
+  text-align: center;
+}
+.item-delete a {
+  border: 1px solid;
+  padding: 5px 10px;
+  background-color: firebrick;
+  color: #f5f5f5;
+  font-size: 14px;
+}
+
+.adminLoginForm input {
+  margin: 30px auto;
+}
+.adminLoginWrapper {
+  text-align: center;
+  height: 100vh;
+}
